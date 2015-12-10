@@ -13,18 +13,28 @@
     </div>
   {% endif %}
 
-
+<div>
 <h1 class="event" id="title">{{event.title}}</h1>
-<span class="event" id="date">{{event.date}}</span>
-<span class="event" id="location">{{event.location}}</span>
+</div>
+<div>
 <img class="event" id="image" src={{event.image}}>
+</div>
+<div>
+<label for "date">When?</label>
+<span class="event" id="date">{{event.date}}</span>
+</div>
+<div>
+<label for "location">Where?</label>
+<span class="event" id="location">{{event.location}}</span>
+</div>
+<div>
 <label for "attendees">Attendees:</label>
   <ul id="attendees">
     {% for attendee in event.attending %}
       <li>{{attendee}}</li>
     {% endfor %}
   </ul>
-
+</div>
 <form id="rsvp" method="POST">
 
     <label for="email">Please RSVP with your Yale email address</label>
